@@ -1,0 +1,82 @@
+/* COMMON */
+ul{
+  list-style: none;
+}
+.inner{
+  width:1100px;
+  margin: auto;
+}
+span{
+  color: #fff;
+}
+
+/* HEADER */
+header{
+  background-color: #202020;
+  height: 56px;
+  justify-content: center;
+}
+header .inner{
+  display: flex;
+  height: 56px;
+  justify-content: space-around;
+  align-items: center;
+}
+header .inner .header_left{
+  display: flex;
+  color: #fff;
+}
+header .inner .header_left a{
+  /* display: block; */
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 56px; */
+}
+header .inner .header_center{
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+header .inner .header_center input{
+  width:30vw;
+  outline: none;
+}
+header .inner .header_center input:hover .keyboard{
+  display: none;
+}
+header .inner .header_center input:hover .keyboard{
+  position: absolute;
+  right: -30px;
+  top: 0;
+  display: block;
+}
+header .inner .header_center .search{
+  position: absolute;
+  right: 0px;
+  background-color: #313131;
+  width: 10%;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 8px;
+}
+header .inner .header_center .mic{
+  display: block;
+  position: absolute;
+  right: -30px;
+  top: 0;
+  bottom: 0;
+  height: 56px;
+  margin: center;
+}
+header .inner .header_right{
+  display: flex;
+  color: #fff;
+}
+
+/* PLAYER */
+.palyer>div{
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
