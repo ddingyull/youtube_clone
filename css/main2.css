@@ -1,0 +1,42 @@
+/* COMMON */
+
+ul{
+  list-style: none;
+}
+.inner{
+  width:1100px;
+  margin: auto;
+}
+a{
+  font-style: none;
+  list-style: none;
+}
+
+/* HEADER */
+header{
+  background-color: #f6f5ef;
+  border-bottom: 1px solid #c8c8c8;
+}
+header .inner{
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .inner .logo > i{
+  color: #333;
+}
+
+/* PLAYER */
+.player .inner{
+  margin-top: 30px;
+}
+.player .inner>div{
+  width: 80vw;
+  height: 50vh;
+  background-color: #c8c8c8;
+  margin: auto;
+}
+
+/* INFO */
+.info .inner
