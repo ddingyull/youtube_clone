@@ -22,7 +22,7 @@
   <!-- css -->
   <link rel="stylesheet" href="./css/main.css">
   <!-- js -->
-  <script src="./main.js"></script>
+  <script defer src="./main.js"></script>
   <title>Youtube</title>
 </head>
 
@@ -53,38 +53,41 @@
     <section class="info">
       <!-- Metadata -->
       <div class="metadata">
-        <ul class="hashtags">
-          <li>#DreamCoding</li>
-          <li>#Dreamcoders</li>
-          <li>#Ellie</li>
-        </ul>
         <div class="titleAndButton">
-          <span class="title">💟VLOG💟 여름맞이 새로 구매한 다꾸용품으로 일주일 계획하기❤️‍🔥 |아날로그키퍼 | 일주일 공부 계획 | 필기구 추천 | 코린이의 첫 유튜브 페이지
+          <span class="title clamp">💟VLOG💟 여름맞이 새로 구매한 다꾸용품으로 일주일 계획하기❤️‍🔥 |아날로그키퍼 | 일주일 공부 계획 | 필기구 추천 | 코린이의 첫 유튜브 페이지
             따라하기 프로젝트</span>
           <button class="moreBtn">
             <i class="fas fa-caret-down"></i>
           </button>
         </div>
         <div class="views">
-          <span class="views">1M views 1 month</span>
+          <ul class="hashtags">
+            <li class="views">1만회 • 2달 전</li>
+            <li>#다꾸용품</li>
+            <li>#아닐로그키퍼</li>
+            <li>#공부계획</li>
+          </ul>
         </div>
       </div>
       <!-- Actions -->
       <ul class="actions">
         <li>
-          <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
+          <button><i class="fas fa-thumbs-up"></i><span>3.2천</span></button>
         </li>
         <li>
-          <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+          <button><i class="fas fa-thumbs-down"></i><span>싫어요</span></button>
         </li>
         <li>
-          <button><i class="fas fa-share"></i><span>Share</span></button>
+          <button><i class="fas fa-share"></i><span>공유</span></button>
         </li>
         <li>
-          <button><i class="fas fa-plus"></i><span>Save</span></button>
+          <button><i class="fas fa-plus"></i><span>오프라인 저장</span></button>
         </li>
         <li>
-          <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+          <button><i class="fa-solid fa-scissors"></i><span>클립</span></button>
+        </li>
+        <li>
+          <button><i class="fab fa-font-awesome-flag"></i><span>저장</span></button>
         </li>
 
       </ul>
@@ -94,15 +97,37 @@
           <img src="./image/it's me.png" alt="" />
           <div class="info">
             <span class="name">dding's v-log</span>
-            <span class="subscribers">1M subscribers</span>
+            <span class="subscribers">구독자 1.2만명</span>
           </div>
         </div>
-        <button class="subscribe">subscribe</button>
+        <button class="subscribe">구독</button>
+      </div>
+
+      <!-- channel Comments info-->
+      <div class="comments">
+        <div class="metadata">
+
+          <div class="comment_info">
+            <span>댓글</span>
+            <span>159</span>
+          </div>
+
+          <div class="more_comment"><i class="fa-solid fa-angle-down"></i></div>
+        </div>
+
+        <div>
+          </div>
+      <!-- channel Comments-->
+      <div class="comment__text">
+        <img src="./image/파이리.png" alt=""/>
+        <div>감성 다꾸샵 공유 감사합니다~</div>
+      </div>
+        
       </div>
     </section>
 
+    <!-- up next -->
     <section class="UpNext">
-      <span class="title">Up next</span>
       <ul>
         <li class="item">
           <div class="img"><img src="./image/2.jpeg" alt=""></div>
@@ -142,6 +167,7 @@
         </li>
       </ul>
     </section>
+
   </div>
 </body>
 

@@ -33,6 +33,8 @@ button:focus{
   border: none;
   cursor: pointer;
   outline: none;
+  /* 설정하지 않았는데 bgc:ececec가 있는 이유가 무엇인지? 안없어져서 투명처리함 */
+  background-color: transparent;
 }
 
 body{
@@ -66,15 +68,15 @@ header .icons .fa-search{
   position: sticky;
   top:0;
   background-color: var(--black-color);
-
 }
+
 .player img{
   width: 100%;
   height: 100%;
-  max-width: 1000px;
+  max-width: 800px;
 }
 
-body > .info{
+.infoUpNext > .info{
   padding: var(--padding);
 }
 
@@ -82,6 +84,7 @@ body > .info{
   display: flex;
   font-size: var(--font-small);
   color: var(--blue-color);
+  padding: calc(var(--padding)/2);
 }
 
 .info .metadata .hashtags li{
@@ -94,29 +97,38 @@ body > .info{
 
 .info .metadata .titleAndButton .title{
   font-size: var(--font-large);
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title.clamp{
   /* css line clamp */
-  /* width: 700px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  overflow: hidden; */
-  margin-right: var(--padding);
+  overflow: hidden;
 }
 
 .info .metadata .titleAndButton .moreBtn{
   height: 100%;
+  transition : transform 300ms;
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked{
+  transform: rotate(180deg);
 }
 
 .info .views {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+  padding: calc(var(--padding)/2 0);
 }
 
-/* ACTION */
+/* ACTION  -> 가로 scroll 넣어보기*/ 
 .actions{
   display: flex;
   justify-content: space-around;
   margin: var(--padding) 0;
+  background-color: none;
 }
 
 .actions button{
@@ -124,16 +136,16 @@ body > .info{
   flex-direction: column;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
-
 }
+
+.actions button:hover{
+  color: var(--blue-color);
+}
+
 .actions button i{
   margin: 0 auto;
   margin-bottom: calc(var(--padding) / 2);
   font-size: 16px;
-}
-
-.actions button i.active{
-  color: var(--blue-color);
 }
 
 /* CHANNEL */
@@ -152,6 +164,7 @@ body > .info{
 .channel .metadata .info{
   display: flex;
   flex-direction: column;
+  padding: var(--padding);
 }
 .channel .metadata img{
   width: var(--avatar-size);
@@ -160,18 +173,48 @@ body > .info{
 }
 
 .channel .metadata .info .name{
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
 }
 
-.channel .metadata .info .name .subscribers{
+.channel .metadata .info .subscribers{
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
 .channel .subscribe {
-  text-transform: uppercase;
+  /* 영어일 경우 : text-transform: uppercase; */
   color: var(--red-color);
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
+  background-color:transparent;
+}
+
+/* channel comments info */
+.comments .metadata{
+display: flex;
+justify-content: space-between;
+}
+
+.comments .metadata .comment_info{
+  padding: var(--padding) ;
+}
+
+.comments .metadata i{
+  padding: var(--padding) ;
+}
+
+/* channel comments */
+.comments{
+  border-bottom: 1px solid var(--grey-light-color);
+}
+.comments img{
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin-right: calc(var(--padding) /2);  
+}
+.comments .comment__text{
+  display: flex;
+  align-items: center;
 }
 
 /* Up Next */
